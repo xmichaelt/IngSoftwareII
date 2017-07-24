@@ -1,16 +1,4 @@
-/*
- * Juego.java
- *
- * Created on 18 de noviembre de 2006, 19:46
- *
- * To change this template, choose Tools | Template Manager
- * and open the template in the editor.
- */
 
-/**
- *
- * @author prueba
- */
 import java.io.*;
 import java.applet.*;
 import java.awt.*;
