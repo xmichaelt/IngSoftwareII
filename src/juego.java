@@ -1,12 +1,21 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
+/**
+ *
+ * @author michael
+ */
 import java.io.*;
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class juego extends Applet {
-    Image imag;
-    int a,  x=115, y=110; 
+    Image img;
+    int code,  x=115, y=110;
     String dato="";
     
     public void init() {
@@ -15,7 +24,7 @@ public class juego extends Applet {
     
     public void paint(Graphics g) {
      
-        g.setColor(Color.BLACK);
+        g.setColor(Color.BLUE);
         
         g.drawLine(100,100,150,100);
         g.drawLine(100,100,100,350);
@@ -70,7 +79,6 @@ public class juego extends Applet {
         g.drawLine(350,200,350,350);
         g.drawLine(350,350,150,350);
         g.drawLine(150,350,150,100);
-        g.drawLine(150,350,350,100);
         
         g.drawLine(450,450,500,450);
         
@@ -78,10 +86,10 @@ public class juego extends Applet {
         //g.drawString(code,200,40);
         g.drawString(dato,200,40);
         
-        imag=getImage(getDocumentBase(), "homero.gif");
+        img=getImage(getDocumentBase(), "homero.gif");
         g.setFont(new Font("Chiller", Font.BOLD, 10));
         g.setColor(new Color(255,0,0));
-        g.drawImage(imag,x,y,this);
+        g.drawImage(img,x,y,this);
         //setBackground(new Color(0,0,0));   
     }
     
@@ -94,12 +102,12 @@ public class juego extends Applet {
     }
     
     public void formKeyPressed(KeyEvent evt){
-        a=evt.getKeyCode(); //obtiene codigo de la tecla presionada
-        dato=evt.getKeyText(a); //obtiene el nombre de la tecla presionada
+        code=evt.getKeyCode(); //obtiene codigo de la tecla presionada
+        dato=evt.getKeyText(code); //obtiene el nombre de la tecla presionada
         mover(dato);
     }
     
-    public void mover(String dato) {
+  public void mover(String dato) {
         if(dato.equalsIgnoreCase("Derecha")){
             x+=5;  
             y+=0;
