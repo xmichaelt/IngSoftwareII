@@ -110,6 +110,6 @@ public class lab2 extends Applet {
         g.drawImage(fuego,450,530,this);
         g.drawImage(fuego,520,530,this);
         g.drawImage(fuego,760,30,this);
-    }
+    }:
       
     
