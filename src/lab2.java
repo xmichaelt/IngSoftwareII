@@ -1,10 +1,3 @@
-
-import java.applet.Applet;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Image;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,6 +9,11 @@ import java.awt.Image;
  * @author michael
  */
 
+import java.io.*;
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+
 public class lab2 extends Applet {
     Image img, img2, fuego;
     int code,  x=115, y=110;
@@ -25,11 +23,8 @@ public class lab2 extends Applet {
     public void init() {
         initcomponents();
     }
-
-    private void initcomponents() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-      public void paint(Graphics g) {
+    
+    public void paint(Graphics g) {
         setBackground(Color.BLACK);
         g.setColor(Color.RED);
         
@@ -110,6 +105,471 @@ public class lab2 extends Applet {
         g.drawImage(fuego,450,530,this);
         g.drawImage(fuego,520,530,this);
         g.drawImage(fuego,760,30,this);
-    }:
-      
+    }
     
+  void initcomponents(){        
+        addKeyListener(new KeyAdapter(){
+            public void keyPressed(KeyEvent evt){
+                formKeyPressed(evt);
+            }            
+        });                
+    }
+    
+    public void formKeyPressed(KeyEvent evt){
+        code=evt.getKeyCode(); //obtiene codigo de la tecla presionada
+        dato=evt.getKeyText(code); //obtiene el nombre de la tecla presionada
+        mover(dato);
+    }
+    
+    public void mover(String dato) {
+        //Movimiento arriba - abajo
+        if((x>=100 && x<=150) &&(y>=100 && y<=355)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=355){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=100){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        //Movimiento izquierda - derecha
+        if((x>=55 && x<=360) &&(y>=320 && y<=355)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=360) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=55) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=355 && x<=370) &&(y>=210 && y<=360)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=360){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=210){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=360 && x<=520) &&(y>=205 && y<=215)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=520) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=360) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=360 && x<=610) &&(y>=305 && y<=320)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=610) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=360) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=605 && x<=620) &&(y>=305 && y<=460)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=460){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=305){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=60 && x<=610) &&(y>=455 && y<=465)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=610) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=60) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=500 && x<=520) &&(y>=410 && y<=460)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=460){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=410){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=455 && x<=515) &&(y>=405 && y<=415)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=510) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=460) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=55 && x<=70) &&(y>=460 && y<=610)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=610){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=460){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=60 && x<=710) &&(y>=605 && y<=615)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=710) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=60) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=255 && x<=270) &&(y>=560 && y<=610)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=610){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=560){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=705 && x<=715) &&(y>=460 && y<=610)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=610){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=460){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=710 && x<=910) &&(y>=455 && y<=465)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=910) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=710) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=855 && x<=870) &&(y>=460 && y<=560)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=560){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=460){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=905 && x<=915) &&(y>=110 && y<=460)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=460){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=110){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=810 && x<=910) &&(y>=205 && y<=215)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=910) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=810) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=760 && x<=910) &&(y>=105 && y<=115)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=910) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=760) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=755 && x<=770) &&(y>=110 && y<=210)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=210){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=110){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=660 && x<=760) &&(y>=205 && y<=215)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=760) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=660) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=655 && x<=670) &&(y>=60 && y<=210)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=210){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=60){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+       repaint();        
+    }
+}
