@@ -94,3 +94,192 @@ public class lab1 extends Applet {
         g.drawImage(img,x,y,this);
         //setBackground(new Color(0,0,0));   
     }
+       public void mover(String dato) {
+        //Movimiento arriba - abajo
+        if((x>=100 && x<=150) &&(y>=100 && y<=355)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=355){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=100){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        //Movimiento izquierda - derecha
+        if((x>=55 && x<=360) &&(y>=320 && y<=355)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=360) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=55) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=355 && x<=370) &&(y>=210 && y<=360)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=360){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=210){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=360 && x<=520) &&(y>=205 && y<=215)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=520) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=360) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=360 && x<=610) &&(y>=305 && y<=320)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=610) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=360) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=605 && x<=620) &&(y>=305 && y<=460)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=460){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=305){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=60 && x<=610) &&(y>=455 && y<=465)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=610) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=60) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
+        //Movimiento arriba - abajo
+        if((x>=500 && x<=520) &&(y>=410 && y<=460)){
+            if((dato.equalsIgnoreCase("Inactivo"))) {
+                if(y!=460){
+                    y+=vel;
+                    x+=0;
+                    repaint(); 
+                }
+            }
+            else {
+                if((dato.equalsIgnoreCase("Arriba"))) {
+                    if(y!=410){
+                        y-=vel;
+                        x+=0;
+                        repaint();                         
+                    }
+               }                
+            }            
+        }
+        
+        
+        //Movimiento izquierda - derecha
+        if((x>=455 && x<=515) &&(y>=405 && y<=415)){
+            if(dato.equalsIgnoreCase("Derecha")){
+                if (x!=510) {
+                    x+=vel;  
+                    y+=0;
+                    repaint();
+                }
+            }
+            else {
+                if(dato.equalsIgnoreCase("Izquierda")){
+                    if(x!=460) {
+                        x-=vel; 
+                        y+=0;
+                        repaint();
+                    }                    
+                }
+            }
+        }
+        
+        
